@@ -68,9 +68,8 @@ docker system prune -a --volumes -f
 
 ### 🌐 Сети (Networks)
 
-*   **Удаление всех неиспользуемых виртуальных сетей:**
     ```bash
-    docker network prune -a -f
+    docker network prune  -f
     ```
 
 ---
