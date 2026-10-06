@@ -45,10 +45,7 @@ docker system prune -a --volumes -f
     ```bash
     docker container prune -f
     ```
-*   **Принудительное удаление абсолютно всех контейнеров (включая запущенные):**
-    ```bash
-    docker rm -f $(docker ps -aq)
-    ```
+
 
 ### 💿 Образы (Images)
 
@@ -60,10 +57,7 @@ docker system prune -a --volumes -f
     ```bash
     docker image prune -a -f
     ```
-*   **Удаление абсолютно всех образов из локального хранилища:**
-    ```bash
-    docker rmi -f $(docker images -aq)
-    ```
+
 
 ### 💾 Тома данных (Volumes)
 
@@ -71,10 +65,7 @@ docker system prune -a --volumes -f
     ```bash
     docker volume prune -a -f
     ```
-*   **Удаление абсолютно всех существующих томов:**
-    ```bash
-    docker volume rm $(docker volume ls -q)
-    ```
+
 
 ### 🛠️ Кэш сборщика (Build Cache)
 
