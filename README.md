@@ -41,19 +41,13 @@ docker system prune -a --volumes -f
 
 ### 📦 Контейнеры (Containers)
 
-*   **Удаление всех остановленных контейнеров:**
     ```bash
-    docker container prune -f
+    docker container prune -a -f
     ```
 
 
 ### 💿 Образы (Images)
 
-*   **Удаление только «висящих» (dangling) образов (без тегов):**
-    ```bash
-    docker image prune -f
-    ```
-*   **Удаление всех неиспользуемых образов (даже с тегами, если они не привязаны к контейнерам):**
     ```bash
     docker image prune -a -f
     ```
@@ -61,7 +55,6 @@ docker system prune -a --volumes -f
 
 ### 💾 Тома данных (Volumes)
 
-*   **Удаление всех неиспользуемых томов (именованных и анонимных):**
     ```bash
     docker volume prune -a -f
     ```
@@ -69,7 +62,6 @@ docker system prune -a --volumes -f
 
 ### 🛠️ Кэш сборщика (Build Cache)
 
-*   **Удаление всего кэша сборки Docker (BuildKit):**
     ```bash
     docker builder prune -a -f
     ```
@@ -78,12 +70,7 @@ docker system prune -a --volumes -f
 
 *   **Удаление всех неиспользуемых виртуальных сетей:**
     ```bash
-    docker network prune -f
+    docker network prune -a -f
     ```
 
 ---
-
-## 💡 Полезные советы
-
-1. **Безопасный запуск:** Перед массовым удалением всегда проверяйте список активных контейнеров с помощью `docker ps`, чтобы случайно не остановить рабочие сервисы.
-2. **Автоматизация очистки:** Вы можете настроить выполнение команды `docker system prune -f` по расписанию (например, через `cron` раз в неделю), чтобы поддерживать порядок в системе и предотвращать переполнение диска.
