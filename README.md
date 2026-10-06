@@ -48,9 +48,7 @@ docker system prune -a --volumes -f
 
 ### 💿 Образы (Images)
 
-    ```bash
     docker image prune -a -f
-    ```
 
 
 ### 💾 Тома данных (Volumes)
