@@ -41,9 +41,7 @@ docker system prune -a --volumes -f
 
 ### 📦 Контейнеры (Containers)
 
-    ```bash
-    docker container prune -a -f
-    ```
+    docker container prune -f
 
 
 ### 💿 Образы (Images)
@@ -53,21 +51,15 @@ docker system prune -a --volumes -f
 
 ### 💾 Тома данных (Volumes)
 
-    ```bash
     docker volume prune -a -f
-    ```
 
 
 ### 🛠️ Кэш сборщика (Build Cache)
 
-    ```bash
     docker builder prune -a -f
-    ```
 
 ### 🌐 Сети (Networks)
 
-    ```bash
     docker network prune  -f
-    ```
 
 ---
